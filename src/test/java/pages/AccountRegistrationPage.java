@@ -27,6 +27,49 @@ public class AccountRegistrationPage extends BasePage {
     public WebElement passwordConfirmField;
     @FindBy(xpath = "//input[@value='Continue']")
     public WebElement continueButton;
+    @FindBy(xpath = "//input[@name='agree']")
+    public WebElement privacyPolicyCheckbox;
+    @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
+    public WebElement confirmationMsg;
 
     // Action Methods
+    public void setFirstName(String firstName) {
+        firstNameField.sendKeys(firstName);
+    }
+
+    public void setLastName(String lastName) {
+        lastNameField.sendKeys(lastName);
+    }
+
+    public void setEmail(String email) {
+        emailField.sendKeys(email);
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        phoneNumField.sendKeys(phoneNumber);
+    }
+
+    public void setPassword(String password) {
+        passwordField.sendKeys(password);
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        passwordConfirmField.sendKeys(passwordConfirm);
+    }
+
+    public void clickPrivacyPolicyCheckbox() {
+        privacyPolicyCheckbox.click();
+    }
+
+    public void clickContinueButton() {
+        continueButton.click();
+    }
+
+    public String getConfirmationMessage() {
+        try {
+            return confirmationMsg.getText();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+    }
 }
