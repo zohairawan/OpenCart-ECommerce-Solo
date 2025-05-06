@@ -1,0 +1,45 @@
+Phases / Stages of automation process
+1. Analyzing AUT(Application Under Test)
+    # of pages
+    What are the elements / how we can automate / type of elements
+    What to automate / what not to automate
+
+2. Choose test cases for automation
+    Test cases are chosen for automation based on priority
+    Sanity - Priority
+    Data driven / re-tests - Priority 2
+    Regression - Priority 3
+    Any other test cases - Priority 4
+
+3. Design and Development of framework
+    Design - a blueprint
+        Create framework and folder structure
+    Development
+        Add utility files
+        Create Page Object Classes
+        Create test cases
+
+4. Execution
+    Local - Executing test cases on your local computer
+    Remote - Executing test cases on a remote computer
+
+5. Maintenance
+
+
+
+E-Commerce Domain
+-----------------
+Frontend operations (customer/user)
+    Register account
+    Login to application
+    Search for product
+    Add/Edit/Remove product to cart
+    Add/Remove product to watchlist
+    Order product
+    Track status of product
+    Provide review of product
+Backend operations (Admins/Backend teams)
+    Maintain product/customer/order/store/etc... information
+
+
+https://tutorialsninja.com/demo
