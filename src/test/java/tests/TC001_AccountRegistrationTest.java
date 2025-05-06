@@ -10,8 +10,6 @@ import tests.base.BaseTest;
 
 public class TC001_AccountRegistrationTest extends BaseTest {
 
-    public WebDriver driver;
-
     @Test
     public void verifyAccountRegistration() {
         HomePage homePage = new HomePage(driver);
