@@ -16,7 +16,14 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@title='My Account']")
     public WebElement myAccountDropdown;
     @FindBy(xpath = "//a[normalize-space()='Register']")
-    public WebElement registrationButton;
+    public WebElement registerLink;
 
     // Action Methods
+    public void clickMyAccountDropdown() {
+        myAccountDropdown.click();
+    }
+
+    public void clickRegisterLink() {
+        registerLink.click();
+    }
 }
