@@ -1,0 +1,18 @@
+<!--<suite name="Cross Browser" thread-count="5" parallel="tests">-->
+<suite name="Cross Browser">
+    <test name="Chrome">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.TC001_AccountRegistrationTest"/>
+        </classes>
+    </test>
+
+    <test name="Firefox">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="tests.TC001_AccountRegistrationTest"/>
+        </classes>
+    </test>
+</suite>
