@@ -17,8 +17,8 @@
 - Test Execution: `Selenium WebDriver & Selenium Grid`
 - Configuration Management: `xml and .properties file`
 - Logging: `Log4j2`
-- Reporting: `Extent Reports`
 - Data-Driven Testing: `Excel-based test data`
+- Reporting: `Extent Reports`
 - CI: `Jenkins`
 - Containerization and Parallel Execution: `Docker with Selenium Grid`
 - Test Execution Methods: `Maven, Command Prompt, and run.bat file`
