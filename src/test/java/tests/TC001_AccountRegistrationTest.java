@@ -32,7 +32,7 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 
             String actualConfirmationMessage = accountRegistrationPage.getConfirmationMessage();
             String expectedConfirmationMessage = "Your Account Has Been Created!";
-            logger.info("Validating expected message");
+            logger.info("Validating actual message");
             if (!actualConfirmationMessage.equals(expectedConfirmationMessage)) {
                 logger.error("'TEST FAILED': Expected '" + expectedConfirmationMessage + "' but got '" + actualConfirmationMessage + "'");
                 logger.debug("Debugging info: Check if the registration flow has changed");
