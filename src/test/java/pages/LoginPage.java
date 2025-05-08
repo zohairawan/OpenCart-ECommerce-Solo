@@ -19,4 +19,15 @@ public class LoginPage extends BasePage {
     public WebElement loginButton;
 
     // Action methods
+    public void typeEmailAddress(String emailAddress) {
+        emailAddressField.sendKeys(emailAddress);
+    }
+
+    public void typePassword(String passowrd) {
+        passwordField.sendKeys(passowrd);
+    }
+
+    public void clickLoginButton() {
+        loginButton.click();
+    }
 }
