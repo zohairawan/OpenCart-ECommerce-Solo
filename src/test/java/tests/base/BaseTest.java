@@ -23,7 +23,7 @@ public class BaseTest {
 
     @BeforeClass
     @Parameters({"os", "browser"})
-    public void setup(String os, String browser) {
+    public void setUp(String os, String browser) {
         try (FileReader fileReader = new FileReader(System.getProperty("user.dir") + "//src//test//resources//config.properties")) {
             propertiesFile = new Properties();
             propertiesFile.load(fileReader); // Load data from config.properties into propertiesFile
