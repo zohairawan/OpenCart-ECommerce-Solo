@@ -17,13 +17,13 @@ public class HomePage extends BasePage {
     public WebElement myAccountDropdown;
     @FindBy(xpath = "//a[normalize-space()='Register']")
     public WebElement registerLink;
+    @FindBy(xpath = "//a[normalize-space()='Login']")
+    public WebElement loginLink;
 
     // Action Methods
     public void clickMyAccountDropdown() {
         myAccountDropdown.click();
     }
-
-    public void clickRegisterLink() {
-        registerLink.click();
-    }
+    public void clickRegisterLink() {registerLink.click();}
+    public void clickLoginLink(){loginLink.click();}
 }
