@@ -26,7 +26,7 @@
 ### Steps
 1. Add necessary dependencies to pom.xml
 2. Create appropriate framework folder structure
-   - ![Folder Structure](img/folderStructure.png)
+   - <img src="img/folderStructure.png" alt="Folder Structure" height="250" width="200">
 3. Automate Account Registration test case
    - Create `BasePage`(Reduce code duplication/Reusability)
    - Create `HomePage` and `AccountRegistrationPage`
