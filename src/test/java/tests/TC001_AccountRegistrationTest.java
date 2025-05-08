@@ -10,8 +10,8 @@ public class TC001_AccountRegistrationTest extends BaseTest {
 
     @Test
     public void verifyAccountRegistrationTest() {
+        logger.info("***** Started verifyAccountRegistrationTest *****");
         try {
-            logger.info("***** Started verifyAccountRegistrationTest *****");
             HomePage homePage = new HomePage(driver);
             homePage.clickMyAccountDropdown();
             logger.info("Clicked on 'Account' dropdown");
@@ -37,7 +37,7 @@ public class TC001_AccountRegistrationTest extends BaseTest {
                 logger.error("'TEST FAILED': Expected '" + expectedConfirmationMessage + "' but got '" + actualConfirmationMessage + "'");
                 logger.debug("Debugging info: Check if the registration flow has changed");
             }
-            Assert.assertEquals(actualConfirmationMessage,expectedConfirmationMessage);
+            Assert.assertEquals(actualConfirmationMessage, expectedConfirmationMessage);
             logger.info("Test Passed!");
         } catch (Exception e) {
             logger.error("'TEST FAILED': " + e.getMessage());
