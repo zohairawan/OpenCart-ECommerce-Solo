@@ -1,9 +1,17 @@
 <suite name="Master Suite">
-    <test name="Account Registration">
+<!--    <test name="Account Registration">-->
+<!--        <parameter name="os" value="windows"/>-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.TC001_AccountRegistrationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Valid Login">
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.TC001_AccountRegistrationTest"/>
+            <class name="tests.TC002_LoginTest"/>
         </classes>
     </test>
 </suite>
