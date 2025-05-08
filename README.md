@@ -31,7 +31,7 @@
    - Create `BasePage`(Reduce code duplication/Reusability)
    - Create `HomePage` and `AccountRegistrationPage`
    - Create `BaseTest`(Reduce code duplication/Reusability)
-   - Create `AccountRegistrationTest`
+   - Create and implement `AccountRegistrationTest`
 4. Add logging
    - Add `log4j2.xml` in `src/test/resources`
    - Update `BaseTest` to include `logger` object
@@ -58,6 +58,6 @@
         - `LoginPage` (New)
         - `MyAccountPage` (New)
         - `HomePage` (Updated)
-    - Create `LoginTest`
+    - Create and implement `LoginTest`
     - Add `LoginTest` to XML file
 10. Automate Data-Driven Login test case
