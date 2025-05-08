@@ -9,9 +9,9 @@ import tests.base.BaseTest;
 public class TC001_AccountRegistrationTest extends BaseTest {
 
     @Test
-    public void verifyAccountRegistration() {
+    public void verifyAccountRegistrationTest() {
         try {
-            logger.info("***** Started TC001_AccountRegistrationTest *****");
+            logger.info("***** Started verifyAccountRegistrationTest *****");
             HomePage homePage = new HomePage(driver);
             homePage.clickMyAccountDropdown();
             logger.info("Clicked on 'Account' dropdown");
@@ -44,7 +44,7 @@ public class TC001_AccountRegistrationTest extends BaseTest {
             Assert.fail("'TEST FAILED': " + e.getMessage());
 
         } finally {
-            logger.info("***** Finished TC001_AccountRegistrationTest *****");
+            logger.info("***** Finished verifyAccountRegistrationTest *****");
         }
     }
 }
