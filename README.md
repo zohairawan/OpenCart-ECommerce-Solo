@@ -24,18 +24,23 @@
 - Test Execution Methods: `Maven, Command Prompt, and run.bat file`
 
 ### Steps
-1. Create appropriate framework folder structure
-2. Automate Account Registration test case
-3. Add logging
-4. Parameterize browser
-5. Execute tests across multiple browsers
-6. Enable Parallel Execution of tests
-7. Read values from `.properties` file
-8. Automate Login test case
+1. Add necessary dependencies to pom.xml
+2. Create appropriate framework folder structure
+   - ![Folder Structure](img/folderStructure.png)
+3. Automate Account Registration test case
+   - Create `BasePage`(Reduce code duplication/Reusability)
+   - Create `HomePage` and `AccountRegistrationPage`
+   - Create `AccountRegistrationTest`
+4. Add logging
+5. Parameterize browser
+6. Execute tests across multiple browsers
+7. Enable Parallel Execution of tests
+8. Read values from `.properties` file
+9. Automate Login test case
     - Create/Update Page Classes:
         - `LoginPage` (New)
         - `MyAccountPage` (New)
         - `HomePage` (Updated)
     - Create `LoginTest`
     - Add `LoginTest` to XML file
-9. Automate Data-Driven Login test case
+10. Automate Data-Driven Login test case
