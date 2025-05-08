@@ -39,7 +39,7 @@
 5. Parameterize browser
    - Add `parameter` tag to `xml` file
    - Add `@Parameter` annotation to `setUp()` in `BaseTest`
-   - Add parameters to `setUp()`
+   - Add parameters to `setUp()` -> `setUp(String browser)`
 6. Execute tests across multiple browsers
    - Specify which browser you want to use in the parameter tag
      - `<parameter name="browser" value="chrome"/>`
