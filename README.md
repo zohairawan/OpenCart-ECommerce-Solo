@@ -22,10 +22,11 @@
 
 ### Overview
 - Create appropriate framework folder structure
-- Complete Account Registration test case
+- Automate Account Registration test case
 - Add logging
 - Add Parameterization of browser
 - Add Cross Browser test execution
 - Add Parallel Execution of tests
 - Read values from .properties file
-- Complete Login test case
+- Automate Login test case
+- Automate Data Driven Login test case
