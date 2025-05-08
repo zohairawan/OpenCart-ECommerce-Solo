@@ -11,11 +11,11 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {super(driver);}
 
     // Locators
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@id='input-email']")
     public WebElement emailAddressField;
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@id='input-password']")
     public WebElement passwordField;
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@value='Login']")
     public WebElement loginButton;
 
     // Action methods
