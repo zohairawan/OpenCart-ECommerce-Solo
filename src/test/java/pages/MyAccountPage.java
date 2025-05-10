@@ -17,6 +17,12 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//h2[normalize-space()='My Account']")
     public WebElement myAccountHeader;
 
+    @FindBy(xpath = "(//a[normalize-space()='Logout'])[2]")
+    public WebElement logoutButton;
+
+    @FindBy(xpath = "//a[normalize-space()='Continue']")
+    public WebElement continueAfterLogoutButton;
+
     // Action methods
     public boolean myAccountHeaderIsDisplayed() {
         try {
@@ -24,5 +30,13 @@ public class MyAccountPage extends BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public void clickLogoutButton() {
+        logoutButton.click();
+    }
+
+    public void clickContinueAfterLogoutButton() {
+        continueAfterLogoutButton.click();
     }
 }
