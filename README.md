@@ -61,3 +61,7 @@
     - Create and implement `LoginTest`
     - Add `LoginTest` to XML file
 10. Automate Data-Driven Login test case
+   - Update `MyAccountPage`
+   - Place Excel file in `testData` folder
+   - Create `ExcelUtility` Class in `test/java/utils
+   - Create `DataProviders` Class in `utils` package
