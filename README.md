@@ -54,12 +54,12 @@
    - Update `setUp()`to load and read data from `config.properties` file
    - Update `BaseTest` to read URL from `config.properties` file instead of hard coding URL
 9. Automate Login test case
-    - Create/Update Page Classes:
-        - `LoginPage` (New)
-        - `MyAccountPage` (New)
-        - `HomePage` (Updated)
-    - Create and implement `LoginTest`
-    - Add `LoginTest` to XML file
+   - Create/Update Page Classes:
+     - `LoginPage` (New)
+     - `MyAccountPage` (New)
+     - `HomePage` (Updated)
+     - Create and implement `LoginTest`
+     - Add `LoginTest` to XML file
 10. Automate Data-Driven Login test case
    - Update `MyAccountPage`
    - Place Excel file in `testData` folder
@@ -67,3 +67,5 @@
    - Create `DataProviders` Class in `utils` package
    - Create `LoginDataDrivenTestCase`
    - Add `LoginDataDrivenTestCase` to `xml` file
+11. Grouping tests
+    - 
