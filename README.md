@@ -65,3 +65,5 @@
    - Place Excel file in `testData` folder
    - Create `ExcelUtility` Class in `test/java/utils
    - Create `DataProviders` Class in `utils` package
+   - Create `LoginDataDrivenTestCase`
+   - Add `LoginDataDrivenTestCase` to `xml` file
