@@ -21,7 +21,7 @@ public class BaseTest {
     public Logger logger;
     public Properties propertiesFile;
 
-    @BeforeClass
+    @BeforeClass(groups = {"sanity","regression","datadriven","master"})
     @Parameters({"os", "browser"})
     public void setUp(String os, String browser) {
         try (FileReader fileReader = new FileReader(System.getProperty("user.dir") + "//src//test//resources//config.properties")) {
@@ -45,7 +45,7 @@ public class BaseTest {
         }
     }
 
-    @AfterClass
+    @AfterClass(groups = {"sanity","regression","datadriven","master"})
     public void tearDown() {
         driver.quit();
     }
