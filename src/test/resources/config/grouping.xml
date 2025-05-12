@@ -1,0 +1,18 @@
+<suite name="Grouping Suite">
+    <groups>
+        <run>
+<!--            <include name="datadriven"/>-->
+            <include name="sanity"/>
+            <include name="regression"/>
+        </run>
+    </groups>
+    <test name="Data Driven Login">
+        <parameter name="os" value="windows"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="tests.TC001_AccountRegistrationTest"/>
+            <class name="tests.TC002_LoginTest"/>
+            <class name="tests.TC003_LoginDataDrivenTest"/>
+        </classes>
+    </test>
+</suite>
