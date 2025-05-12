@@ -73,4 +73,4 @@
     - Add `group` attribute to `setUp()` and `tearDown()`
     - Create `grouping.xml` to run groups
 12. Reporting - ExtentReports
-    - Create `ExtentReportUtility` in `test/java/utils`
+    - Create `ExtentReportManager` in `test/java/utils`
