@@ -8,7 +8,7 @@ import tests.base.BaseTest;
 
 public class TC001_AccountRegistrationTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"sanity", "master"})
     public void testAccountRegistration() {
         logger.info("***** Started testAccountRegistration *****");
         try {

@@ -10,7 +10,7 @@ import utils.DataProviders;
 
 public class TC003_LoginDataDrivenTest extends BaseTest {
 
-    @Test(dataProvider = "LoginTest", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "LoginTest", dataProviderClass = DataProviders.class, groups = {"datadriven", "master"})
     public void testLogin(String email, String pwd, String expectedResult) {
         logger.info("***** Started testLogin *****");
         try {

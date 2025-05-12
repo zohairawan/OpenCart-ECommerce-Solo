@@ -9,10 +9,11 @@ import tests.base.BaseTest;
 
 public class TC002_LoginTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"regression", "master"})
     public void testValidCredLogin() {
         logger.info("***** Started testValidCredLogin *****");
         try {
+            System.out.println();
             HomePage homePage = new HomePage(driver);
             homePage.clickMyAccountDropdown();
             logger.info("Clicked on 'Account' dropdown");
