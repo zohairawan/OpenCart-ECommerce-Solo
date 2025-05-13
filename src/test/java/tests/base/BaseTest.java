@@ -54,26 +54,26 @@ public class BaseTest {
             // Run in Grid Environment
             if (propertiesFile.getProperty("executionEnv").equalsIgnoreCase("remote")) {
                 String hubURL = "http://localhost:4444/wd/hub";
-                DesiredCapabilities cap = new DesiredCapabilities();
+                DesiredCapabilities capabilities = new DesiredCapabilities();
 
                 switch (os.toLowerCase()) {
-                    case "windows" -> cap.setPlatform(Platform.WIN11);
-                    case "mac" -> cap.setPlatform(Platform.MAC);
+                    case "windows" -> capabilities.setPlatform(Platform.WIN11);
+                    case "mac" -> capabilities.setPlatform(Platform.MAC);
                     default -> {
                         logger.error("No matching OS");
                         return;
                     }
                 }
                 switch (browser.toLowerCase()) {
-                    case "chrome" -> cap.setBrowserName("chrome");
-                    case "firefox" -> cap.setBrowserName("firefox");
-                    case "edge" -> cap.setBrowserName("MicrosoftEdge");
+                    case "chrome" -> capabilities.setBrowserName("chrome");
+                    case "firefox" -> capabilities.setBrowserName("firefox");
+                    case "edge" -> capabilities.setBrowserName("MicrosoftEdge");
                     default -> {
                         logger.error("No matching browser");
                         return;
                     }
                 }
-                driver = new RemoteWebDriver(new URL(hubURL), cap);
+                driver = new RemoteWebDriver(new URL(hubURL), capabilities);
             }
 
             driver.manage().deleteAllCookies();
