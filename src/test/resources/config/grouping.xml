@@ -6,7 +6,12 @@
             <include name="regression"/>
         </run>
     </groups>
-    <test name="Data Driven Login">
+
+    <listeners>
+        <listener class-name="utils.ExtentReportManager"/>
+    </listeners>
+
+    <test name="Group Tests">
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>

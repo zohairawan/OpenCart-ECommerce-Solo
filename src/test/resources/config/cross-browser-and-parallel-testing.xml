@@ -1,5 +1,9 @@
 <!--<suite name="Cross Browser" thread-count="5" parallel="tests">-->
 <suite name="Cross Browser">
+    <listeners>
+        <listener class-name="utils.ExtentReportManager"/>
+    </listeners>
+
     <test name="Chrome">
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>

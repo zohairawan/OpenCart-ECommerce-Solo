@@ -1,11 +1,7 @@
 <suite name="Master Suite">
-<!--    <test name="Account Registration">-->
-<!--        <parameter name="os" value="windows"/>-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <classes>-->
-<!--            <class name="tests.TC001_AccountRegistrationTest"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <listeners>
+        <listener class-name="utils.ExtentReportManager"/>
+    </listeners>
 
     <test name="Valid Login">
         <parameter name="os" value="windows"/>
