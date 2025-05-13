@@ -94,13 +94,12 @@
     - Running test cases on Grid environment
       - Add parameter to run tests in Grid environment or not in `config.properties` file
         - `executionEnv=local/remote` (you choose whether local OR remote not both)
-      - Update `BaseTest` so it checks whether to run in `local` or `remote`
-      - For `remote` add new code
-        - `String hubURL = http://localhost:4444/wd/hub` (Append `/wd/hub` to Hub URL)
-        - Create `DesiredCapabilities` object
-        - Set OS based on value from `config.properties` file
-          - `cap.setPlatform(Platform.WIN11);`
-        - Set Browser based on value from `.xml` file
-          - `cap.setBrowserName("chrome");`
-        - Create `RemoteWebDriver`object (we don't know the browser until runtime so this Class eliminates that issue)
-          - `driver = new RemoteWebDriver(new URL(hubURL), cap);`
+      - Update `BaseTest` `setUp()`
+        - Run in `remote` or `local`
+        - `remote`
+          - `String hubURL = http://localhost:4444/wd/hub` (Append `/wd/hub` to Hub URL)
+          - Create `DesiredCapabilities` object
+          - Set OS based on value from `config.properties` file -> `capabilities.setPlatform(Platform.WIN11);`
+          - Set Browser based on value from `.xml` file -> `capabilities.setBrowserName("chrome");`
+          - Create `RemoteWebDriver`object (we don't know the browser until runtime so this Class eliminates that issue)
+            - `driver = new RemoteWebDriver(new URL(hubURL), capabilities);`
