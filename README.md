@@ -49,10 +49,10 @@
         - `<suite name="Cross Browser" parallel="tests" thread-count="5">`
 8. Read data from `.properties` file
     - Add `config.properties` file in `src/test/resources`
-    - Add data as `key`=`value` pairs in `config.properties`
+    - Add parameters as `key`=`value` pairs in `config.properties`
         - `homepageURL=https://tutorialsninja.com/demo/`
     - Update `BaseTest` to include `FileReader` and `Properties` objects
-    - Update `setUp()`to load and read data from `config.properties` file
+    - Update `setUp()`to load and read parameters from `config.properties` file
     - Update `BaseTest` to read URL from `config.properties` file instead of hard coding URL
 9. Automate Login test case
     - Create/Update Page Classes:
@@ -80,4 +80,27 @@
     - Make `BaseTest` `driver` `static`
 13. Rerun only Failed Tests
     - test-output => `testng-failed.xml`
-      - Run `mvn test -DsuiteXmlFile=testng.xml` to generate `testng-failed.xml` file
+      - Run `_mvn test -DsuiteXmlFile=testng.xml` to generate `testng-failed.xml` file if one is not present
+14. Selenium Grid
+    - STANDALONE SETUP
+      - Download Selenium Grid `.jar`
+      - Start Selenium Grid `java -jar file-name.jar standalone`
+      - Hub URL `http://localhost:4444/`
+    - DISTRIBUTED SETUP (VM)
+      - Download Grid `.jar` for every machine (hub & node)
+      - Make machine a hub `java -jar file-name.jar hub`
+      - Make machine a node and attach to hub `java -jar file-name.jar node --hub http://<hub-url>:4444`
+      - Grid URL `http://localhost:4444/`
+    - Running test cases on Grid environment
+      - Add parameter to run tests in Grid environment or not in `config.properties` file
+        - `executionEnv=local/remote` (you choose whether local OR remote not both)
+      - Update `BaseTest` so it checks whether to run in `local` or `remote`
+      - For `remote` add new code
+        - `String hubURL = http://localhost:4444/wd/hub` (Append `/wd/hub` to Hub URL)
+        - Create `DesiredCapabilities` object
+        - Set OS based on value from `config.properties` file
+          - `cap.setPlatform(Platform.WIN11);`
+        - Set Browser based on value from `.xml` file
+          - `cap.setBrowserName("chrome");`
+        - Create `RemoteWebDriver`object (we don't know the browser until runtime so this Class eliminates that issue)
+          - `driver = new RemoteWebDriver(new URL(hubURL), cap);`
