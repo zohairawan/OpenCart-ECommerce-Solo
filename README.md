@@ -30,8 +30,8 @@
     - <img src="img/folderStructure.png" alt="Folder Structure" height="250" width="200">
 3. Automate Account Registration test case
     - Create `BasePage`(Reduce code duplication/Reusability)
-    - Create `HomePage` and `AccountRegistrationPage`
     - Create `BaseTest`(Reduce code duplication/Reusability)
+    - Create `HomePage` and `AccountRegistrationPage`
     - Create and implement `AccountRegistrationTest`
 4. Logging
     - Add `log4j2.xml` in `src/test/resources`
@@ -73,4 +73,11 @@
     - Add `group` attribute to `setUp()` and `tearDown()`
     - Create `grouping.xml` to run groups
 12. Reporting - ExtentReports
-    - Create `ExtentReportManager` in `test/java/utils`
+    - Create `ExtentReportManager` Class in `test/java/utils`
+      - Implement `ITestListener` in `ExtentReportManager` Class
+    - Add `ExtentReportManager` to all TestNG `.xml` files
+      - `<listeners><listener class-name="utils.ExtentReportManager"/></listeners>`
+    - Make `BaseTest` `driver` `static`
+13. Rerun only Failed Tests
+    - test-output => `testng-failed.xml`
+      - Run `mvn test -DsuiteXmlFile=testng.xml` to generate `testng-failed.xml` file
