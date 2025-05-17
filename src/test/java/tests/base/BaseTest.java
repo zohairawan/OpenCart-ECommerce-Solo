@@ -1,5 +1,6 @@
 package tests.base;
 
+import com.aventstack.extentreports.Status;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -22,6 +23,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 import java.util.Properties;
 
@@ -89,17 +91,25 @@ public class BaseTest {
         driver.quit();
     }
 
-    public String takeScreenshot(String testMethodName) throws IOException {
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
-        String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + testMethodName + "_" + timeStamp + ".png";
-        File targetFile = new File(targetFilePath);
-        System.out.println("Target File Path: " + targetFilePath);
-//        sourceFile.renameTo(targetFile);
-        FileUtils.copyFile(sourceFile, targetFile);
-        return targetFilePath;
-    }
+//    public String takeScreenshot(String testMethodName) throws IOException {
+//        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+//        File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//        String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+//        String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + testMethodName + "_" + timeStamp + ".png";
+//        File targetFile = new File(targetFilePath);
+//        System.out.println("Target File Path: " + targetFilePath);
+////        sourceFile.renameTo(targetFile);
+//        FileUtils.copyFile(sourceFile, targetFile);
+//        return targetFilePath;
+//    }
+
+//    public static String captureScreenshot(String testMethodName) throws IOException {
+//        TakesScreenshot ts = (TakesScreenshot) driver;
+//        byte[] source = ts.getScreenshotAs(OutputType.BYTES);
+//        // Base64 encode the screenshot for direct attachment to Extent Report
+//        String base64Screenshot = "data:image/png;base64," + Base64.getEncoder().encodeToString(source);
+//        return base64Screenshot;
+//    }
 
     public String randomString(int lengthOfString) {
         return RandomStringUtils.randomAlphabetic(lengthOfString);

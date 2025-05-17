@@ -2,6 +2,7 @@ package utils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -58,13 +59,19 @@ public class ExtentReportManager implements ITestListener {
         test = reports.createTest(result.getTestClass().getName());
         test.assignCategory(result.getMethod().getGroups());
         test.log(Status.FAIL, result.getName() + " failed");
-        try {
-            String imgPath = new BaseTest().takeScreenshot(result.getName());
-            System.out.println("Screenshot saved at: " + imgPath);
-            test.addScreenCaptureFromPath(imgPath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            String imgPath = new BaseTest().takeScreenshot(result.getName());
+//            String imgPath = new BaseTest().captureScreenshot(result.getName());
+            // Log custom messagez
+            // Attach the screenshot to the Extent Report with custom button text
+//            test.addScreenCaptureFromBase64String(imgPath, "Logging Screenshot: ");
+//            System.out.println("Screenshot saved at: " + imgPath);
+//            test.addScreenCaptureFromPath(imgPath);
+//            test.fail("Test Failed", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public void onTestSkipped(ITestResult result) {
