@@ -103,3 +103,5 @@
           - Set Browser based on value from `.xml` file -> `capabilities.setBrowserName("chrome");`
           - Create `RemoteWebDriver`object (we don't know the browser until runtime so this Class eliminates that issue)
             - `driver = new RemoteWebDriver(new URL(hubURL), capabilities);`
+15. Docker
+    - Ensure
