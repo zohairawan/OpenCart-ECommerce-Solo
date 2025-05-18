@@ -7,8 +7,8 @@
         <parameter name="os" value="windows"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.TC001_AccountRegistrationTest"/>
-<!--            <class name="tests.TC002_LoginTest"/>-->
+<!--            <class name="tests.TC001_AccountRegistrationTest"/>-->
+            <class name="tests.TC002_LoginTest"/>
 <!--            <class name="tests.TC003_LoginDataDrivenTest"/>-->
         </classes>
     </test>
